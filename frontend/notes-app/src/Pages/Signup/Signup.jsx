@@ -40,7 +40,7 @@ const Signup = () =>{
       <div className='flex items-center justify-center mt-28'>
         <div className='w-96 border rounded bg-white px-7 py-10'>
           <form onSubmit={handleSignUp}>
-            <h4 className='text-2xl mb-7'>Login </h4>
+            <h4 className='text-2xl mb-7'>Sign Up </h4>
 
             <input 
             type='text'
@@ -68,7 +68,7 @@ const Signup = () =>{
             <button type='submit'className='btn-primary'>Create Account</button>
             <p className='text-sm text-center mt-4'>
               Already have an account? {" "}
-              <Link to="/Signup" className="font-medium text-primary underline">
+              <Link to="/Login" className="font-medium text-primary underline">
               Login
               </Link>
             </p>
