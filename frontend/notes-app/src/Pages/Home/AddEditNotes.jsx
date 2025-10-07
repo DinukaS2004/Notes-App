@@ -1,8 +1,8 @@
-import React, { use, useState } from 'react'
+import { useState } from 'react'
 import TagInput from '../../Components/Input/TagInput'
 import { MdClose } from 'react-icons/md';
 
-const AddEditNotes = ({noteData, type, onClose }) => {
+const AddEditNotes = ({ type, onClose }) => {
     const [title,setTitle] = useState("");
     const [content,setContent] = useState("");
     const [tags,setTags] = useState([]);
@@ -31,9 +31,9 @@ const AddEditNotes = ({noteData, type, onClose }) => {
         setError("");
 
         if(type === "add"){
-            editNote();
-        }else{
             addNewNote();
+        }else{
+            editNote();
         }
     }
 
@@ -64,7 +64,7 @@ const AddEditNotes = ({noteData, type, onClose }) => {
               placeholder='Content'
               rows={10}
               value = {content}
-              onChange = {({target}) => setTitle(target.value)}
+              onChange = {({target}) => setContent(target.value)}
             />
         </div>
 
